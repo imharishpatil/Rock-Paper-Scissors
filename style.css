@@ -1,45 +1,49 @@
-*{
+* {
     margin: 0;
     padding: 0;
     text-align: center;
+    box-sizing: border-box;
 }
 
-h1{
+h1 {
     background-color: #081d31;
     color: #fff;
     height: 4rem;
     line-height: 4rem;
 }
 
-.choice{
+.choice {
     height: 150px;
     width: 150px;
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 1rem;
 }
-.choice:hover{
+
+.choice:hover {
     cursor: pointer;
     background-color: #081b31;
 }
 
-img{
+img {
     height: 140px;
     width: 140px;
     object-fit: cover;
     border-radius: 50%;
 }
 
-.choices{
+.choices {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 4rem;
     margin-top: 5rem;
+    flex-wrap: wrap;
 }
 
-.score-board{
+.score-board {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -47,18 +51,101 @@ img{
     margin: 3rem;
     gap: 5rem;
 }
-#user-score, #comp-score{
+
+#user-score, #comp-score {
     font-size: 4rem;
 }
 
-.msg-container{
+.msg-container {
     margin: 5rem;
 }
-#msg{
+
+#msg {
     background-color: #081b31;
     color: #fff;
     font-size: 2rem;
     display: inline;
     padding: 1rem;
     border-radius: 1rem;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 1200px) {
+    .choices {
+        gap: 2rem;
+    }
+
+    .score-board {
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    h1 {
+        height: 3rem;
+        line-height: 3rem;
+    }
+
+    .choice {
+        height: 120px;
+        width: 120px;
+    }
+
+    .choices {
+        gap: 2rem;
+    }
+
+    .score-board {
+        gap: 2rem;
+        font-size: 1.5rem;
+    }
+
+    #user-score, #comp-score {
+        font-size: 3rem;
+    }
+
+    .msg-container {
+        margin: 3rem;
+    }
+
+    #msg {
+        font-size: 1.5rem;
+        padding: 0.75rem;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        height: 2.5rem;
+        line-height: 2.5rem;
+    }
+
+    .choice {
+        height: 100px;
+        width: 100px;
+    }
+
+    .choices {
+        flex-direction: column;
+        gap: 3rem;
+    }
+
+    .score-board {
+        gap: 1.5rem;
+        font-size: 1.2rem;
+        flex-direction: column;
+    }
+
+    #user-score, #comp-score {
+        font-size: 2.5rem;
+    }
+
+    .msg-container {
+        margin: 2rem;
+    }
+
+    #msg {
+        font-size: 1.2rem;
+        padding: 0.5rem;
+    }
 }
